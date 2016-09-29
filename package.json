@@ -10,11 +10,20 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-as-promised": "^6.0.0",
     "karma": "1.1.1",
     "karma-benchmark": "^0.6.0",
     "karma-benchmark-reporter": "0.1.1",
+    "karma-chai": "^0.1.0",
+    "karma-chai-as-promised": "^0.1.2",
+    "karma-chai-sinon": "^0.1.5",
     "karma-chrome-launcher": "^2.0.0",
     "karma-junit-reporter": "1.1.0",
-    "karma-phantomjs-launcher": "1.0.1"
+    "karma-mocha": "^1.2.0",
+    "karma-phantomjs-launcher": "1.0.1",
+    "mocha": "^3.1.0",
+    "sinon": "^1.17.6",
+    "sinon-chai": "^2.8.0"
   }
 }

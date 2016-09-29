@@ -10,10 +10,16 @@ module.exports = function(config) {
         concurrency: Infinity,
         exclude: [],
         files: [
-            'bench/**/*.bench.js'
+            //'bench/**/*.bench.js',
+            'spec/**/*.js'
+
         ],
         frameworks: [
-            'benchmark'
+            //'benchmark',
+            'mocha',
+            'chai',
+            //'chai-as-promised',
+            //'chai-sinon'
         ],
         junitReporter: {
             outputDir: 'reports',
@@ -23,7 +29,8 @@ module.exports = function(config) {
         port: 9876,
         preprocessors: {},
         reporters: [
-            'benchmark',
+            //'benchmark',
+            'progress',
             'junit'
         ],
         singleRun: true
