@@ -2,6 +2,7 @@
 
 module.exports = function(config) {
     config.set({
+        port: 9876,
         autoWatch: false,
         basePath: '',
         browsers: [
