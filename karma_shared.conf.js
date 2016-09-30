@@ -11,22 +11,9 @@ module.exports = function(config) {
         colors: true,
         concurrency: Infinity,
         exclude: [],
-        files: [
-            //'bench/**/*.bench.js'
-        ],
-        frameworks: [
-            //'benchmark'
-        ],
-        junitReporter: {
-            //outputDir: 'reports'
-            //outputFile: 'benchmark.xml'
-        },
         logLevel: config.LOG_INFO,
         port: 9876,
         preprocessors: {},
-        reporters: [
-            //'junit'
-        ],
         singleRun: true
     });
 };
