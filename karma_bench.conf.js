@@ -1,3 +1,5 @@
+//to run this config type in CLI: karma start karma_bench.conf.js
+
 module.exports = function(config) {
     config.set({
         autoWatch: false,
@@ -10,16 +12,10 @@ module.exports = function(config) {
         concurrency: Infinity,
         exclude: [],
         files: [
-            'bench/**/*.bench.js',
-            'spec/**/*.js'
-
+            'bench/**/*.bench.js'
         ],
         frameworks: [
-            'benchmark',
-            'mocha',
-            'chai'
-            //'chai-as-promised',
-            //'chai-sinon'
+            'benchmark'
         ],
         junitReporter: {
             outputDir: 'reports',
@@ -30,7 +26,6 @@ module.exports = function(config) {
         preprocessors: {},
         reporters: [
             'benchmark',
-            'progress',
             'junit'
         ],
         singleRun: true
