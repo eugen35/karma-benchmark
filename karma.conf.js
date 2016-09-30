@@ -3,21 +3,21 @@ module.exports = function(config) {
         autoWatch: false,
         basePath: '',
         browsers: [
-            'PhantomJS',
-            'Chrome'
+            'PhantomJS'
+            //'Chrome'
         ],
         colors: true,
         concurrency: Infinity,
         exclude: [],
         files: [
-            //'bench/**/*.bench.js',
+            'bench/**/*.bench.js',
             'spec/**/*.js'
 
         ],
         frameworks: [
-            //'benchmark',
+            'benchmark',
             'mocha',
-            'chai',
+            'chai'
             //'chai-as-promised',
             //'chai-sinon'
         ],
@@ -29,7 +29,7 @@ module.exports = function(config) {
         port: 9876,
         preprocessors: {},
         reporters: [
-            //'benchmark',
+            'benchmark',
             'progress',
             'junit'
         ],
