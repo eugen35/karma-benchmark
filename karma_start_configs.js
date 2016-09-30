@@ -5,6 +5,12 @@ var karma = require("karma");
 var path = require('path');
 //var karmaParseConfig = require('karma/lib/config').parseConfig; //Вот утилитка кармы для парсинга конфигурации!!!
 //var mocha_config = karmaParseConfig( path.resolve('./karma_mocha.conf') , {} ); //Видимо, вместо пустого объекта можно было указать конфиг, накладывающийся на конфиг (уже где-то видел такой пример)
+// Так пробовал:
+// var overrided_config = karmaParseConfig( path.resolve(sharedConfigFilePath), path.resolve(configFilePath) );
+// var server = new karma.Server(overrided_config, resolve); server.start();
+// Вроде работает объединение, хотя не факт... Сервак потом чего ругается
+// Такой метод объединения указан здесь: http://www.snip2code.com/Snippet/32023/Gulp-Karma-Integration и здесь: http://stackoverflow.com/questions/23569367/how-do-i-correctly-access-karma-config-object-in-gulp-configuration-to-watch-fil
+
 
 //@todo [Очень очень отдалённое] [Сомнительное] Возможно, следует попробовать запускать несколько серверов карма одновременно, а не последовательно как делаю это сейчас. Хотя попробовал (на PhantomJS) Не получается если оставлять один и тот же порт и если делать разные порты... До конца доводился только самый быстрый тест.. Может это ускорит производительность теста (а нужно ли?), но повысит нагрузку на сервер (ведь запустит несколько инстанций браузера)?
 //Карму с разными конфигами можно запускать только через karma start, а не через karma run,
