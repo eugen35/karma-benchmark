@@ -1,16 +1,10 @@
 //to run this config type in CLI: karma start karma_bench.conf.js
 
+var shared_config = require('./karma_shared.conf'); //Общая конфигурация
+
 module.exports = function(config) {
+    shared_config(config); //Берём общую кофигурацию и дополняем... По ходу свойства верхнего уровня shared_conf заменяются целиком
     config.set({
-        autoWatch: false,
-        basePath: '',
-        browsers: [
-            'PhantomJS'
-            //'Chrome'
-        ],
-        colors: true,
-        concurrency: Infinity,
-        exclude: [],
         files: [
             'bench/**/*.bench.js'
         ],
@@ -21,13 +15,9 @@ module.exports = function(config) {
             outputDir: 'reports',
             outputFile: 'benchmark.xml'
         },
-        logLevel: config.LOG_INFO,
-        port: 9876,
-        preprocessors: {},
         reporters: [
             'benchmark',
             'junit'
-        ],
-        singleRun: true
+        ]
     });
 };
