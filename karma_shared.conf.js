@@ -12,7 +12,6 @@ module.exports = function(config) {
         concurrency: Infinity,
         exclude: [],
         logLevel: config.LOG_INFO,
-        port: 9876,
         preprocessors: {},
         singleRun: true
     });
