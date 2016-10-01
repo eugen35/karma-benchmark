@@ -4,7 +4,8 @@
   "description": "Example of use KarmaJS with Benchmark.js. I.e. start KarmaJS with multi config files. Additionally there are used some badges (shields).",
   "main": "index.js",
   "scripts": {
-    "test": "node karma_start_all_configs"
+    "test": "node karma_start_all_configs",
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
   },
   "keywords": [],
   "author": "",
