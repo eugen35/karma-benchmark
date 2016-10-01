@@ -12,6 +12,7 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "chai-as-promised": "^6.0.0",
+    "coveralls": "^2.11.14",
     "karma": "1.1.1",
     "karma-benchmark": "^0.6.0",
     "karma-benchmark-reporter": "0.1.1",

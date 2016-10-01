@@ -19,11 +19,18 @@ module.exports = function(config) {
             //'chai-as-promised',
             //'chai-sinon'
         ],
-        //preprocessors:['coverage'],
+        preprocessors: {
+          'src/**/*.js': ['coverage']
+        },
         reporters: [
             'progress',
+            'coverage',
             'junit'
         ],
+        coverageReporter: {
+          type : 'html',
+          dir : 'reports'
+        },
         junitReporter: {
             outputDir: 'reports',
             outputFile: 'mocha.xml'
