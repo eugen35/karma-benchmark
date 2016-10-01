@@ -1,10 +1,10 @@
 {
-  "name": "examples",
-  "version": "1.0.0",
-  "description": "",
+  "name": "karma-benchmark",
+  "version": "0.1.0",
+  "description": "Example of use KarmaJS with Benchmark.js. I.e. start KarmaJS with multi config files. Additionally there are used some badges (shields).",
   "main": "index.js",
   "scripts": {
-    "test": "karma start"
+    "test": "node karma_start_all_configs"
   },
   "keywords": [],
   "author": "",
