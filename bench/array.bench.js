@@ -1,14 +1,10 @@
 suite('Array iteration', function() {
-    benchmark('_.each', function() {
-        _.each([1, 2, 3], function(el) {
-            return el;
-        });
+    benchmark('native indexOf', function() {
+        nativeIndexOf([1,2,3],2);
     });
 
-    benchmark('native forEach', function() {
-        [1, 2, 3].forEach(function(el) {
-            return el;
-        });
+    benchmark('find with for (var i = 0 ...)', function() {
+        find([1,2,3],2);
     });
 });
 

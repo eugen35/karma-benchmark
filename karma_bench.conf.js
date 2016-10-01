@@ -8,6 +8,7 @@ module.exports = function(config) {
     // То же самое будет если здесь указать junitReporter: {outputFile: 'benchmark.xml'}, - junitReporter: {outputDir: 'reports'}, указанный в shared_conf, затрётся.
     config.set({
         files: [
+            'src/**/*.js',
             'bench/**/*.bench.js'
         ],
         frameworks: [

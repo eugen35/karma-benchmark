@@ -10,6 +10,7 @@ module.exports = function(config) {
 
     config.set({
         files: [
+            'src/**/*.js',
             'spec/**/*.js'
         ],
         frameworks: [
@@ -18,6 +19,7 @@ module.exports = function(config) {
             //'chai-as-promised',
             //'chai-sinon'
         ],
+        //preprocessors:['coverage'],
         reporters: [
             'progress',
             'junit'
