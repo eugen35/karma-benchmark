@@ -1,6 +1,7 @@
 # karma-benchmark
 Example of use karma with benchmark.js
 
+
 <!-- [![dependencies](http://img.shields.io/npm/v/karma-benchmark.svg)](http://img.shields.io/npm/v/karma-benchmark) -->
 [![Travis build status](https://travis-ci.org/eugen35/karma-benchmark.svg?branch=master)](https://travis-ci.org/eugen35/karma-benchmark)
 [![Coverage Status](https://coveralls.io/repos/github/eugen35/karma-benchmark/badge.svg?branch=master)](https://coveralls.io/github/eugen35/karma-benchmark?branch=master)
