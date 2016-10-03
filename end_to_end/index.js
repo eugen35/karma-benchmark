@@ -14,7 +14,6 @@ test.describe('Google Search', function() {
     driver = new chrome.Driver();
   });
 
-
   test.after(function() {
     driver.quit();
   });
