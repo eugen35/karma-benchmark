@@ -1,4 +1,5 @@
 //to run this config type in CLI: karma start karma_bench.conf.js
+//Данная конфигурация сравнивает производительность одинаковых функций в браузере (клиентский js). Т.е. она не проверяет те файлы, которые имеют вид *.ss.js (серверная часть)
 
 var shared_config = require('./karma_shared.conf'); //Общая конфигурация
 
@@ -9,7 +10,11 @@ module.exports = function(config) {
     config.set({
         files: [
             'src/**/*.js',
-            'bench/**/*.bench.js'
+            'bench/**/*.js' //тесты производительности
+        ],
+        exclude:[
+            'src/**/*.ss.js', //Исключаем из проверки файлы js, которые планируется запускать только на сервере... Зачем нам проверять их производительность в браузерах?
+            'bench/**/*.ss.js' //Исключаем из проверки тесты серверного js
         ],
         frameworks: [
             'benchmark'

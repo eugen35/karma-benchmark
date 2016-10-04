@@ -1,4 +1,6 @@
 //to run this config type in CLI: karma start karma_mocha.conf.js
+//Данная конфигурация запускает модульные тесты клиентского js. Т.е. она не проверяет те файлы, которые имеют вид *.ss.js (серверная часть)
+//И таким образом, они не попадают в оценку coverage
 
 var shared_config = require('./karma_shared.conf'); //Общая конфигурация
 
@@ -12,6 +14,10 @@ module.exports = function(config) {
         files: [
             'src/**/*.js',
             'spec/**/*.js'
+        ],
+        exclude:[
+            'src/**/*.ss.js', //Исключаем из проверки файлы js, которые планируется запускать только на сервере... Зачем нам проверять их производительность в браузерах?
+            'spec/**/*.ss.js' //Исключаем из проверки тесты серверного js
         ],
         frameworks: [
             'mocha',

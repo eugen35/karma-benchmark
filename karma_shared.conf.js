@@ -11,7 +11,6 @@ module.exports = function(config) {
         ],
         colors: true,
         concurrency: Infinity,
-        exclude: [],
         logLevel: config.LOG_INFO,
         preprocessors: {},
         singleRun: true
