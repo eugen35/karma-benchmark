@@ -4,8 +4,7 @@
   "description": "Example of use KarmaJS with Benchmark.js. I.e. start KarmaJS with multi config files. Additionally there are used some badges (shields).",
   "main": "index.js",
   "scripts": {
-    "test": "node karma_start_all_configs",
-    "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
+    "test": "node karma_start_all_configs"
   },
   "keywords": [],
   "author": "",
@@ -13,7 +12,6 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "chai-as-promised": "^6.0.0",
-    "coveralls": "^2.11.14",
     "karma": "1.1.1",
     "karma-benchmark": "^0.6.0",
     "karma-benchmark-reporter": "0.1.1",
