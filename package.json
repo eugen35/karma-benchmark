@@ -6,7 +6,7 @@
   "scripts": {
     "test": "npm run test_server_side && npm run test_client_side && npm run test_end_to_end",
     "test_client_side": "node karma_start_all_configs",
-    "test_server_side": "node karma_start_all_configs",
+    "test_server_side": "mocha $(find spec/ ! -path '*.cs.js')",
     "test_end_to_end": "mocha -t 10000 end_to_end/index.js"
   },
   "keywords": [],

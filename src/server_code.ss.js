@@ -13,3 +13,5 @@ function getAnswer(question){
       return "I do not understand. May be you you ask about my side?"
   }
 }
+
+module.exports = getAnswer;
