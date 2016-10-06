@@ -8,7 +8,7 @@
     "test_client_side_unit_n_bench": "node karma_start_all_configs",
     "test_server_side_unit": "istanbul cover node_modules\\mocha\\bin\\_mocha test\\*.ss.js",
     "test_server_side_bench": "node bench/array.ss.js",
-    "test_end_to_end": "mocha -t 10000 end_to_end/index.js"
+    "test_end_to_end": "mocha -t 10000  end_to_end/*.js || exit 0"
   },
   "keywords": [],
   "author": "",

@@ -9,7 +9,7 @@ var expect = chai.expect
 
 var By = require('selenium-webdriver').By;
 
-//setup custom phantomJS capability
+//setup custom PhantomJS capability
 var selenium = require('selenium-webdriver');
 var phantomjs_exe = require('phantomjs-prebuilt').path;
 var customPhantom = selenium.Capabilities.phantomjs();
@@ -20,7 +20,7 @@ withCapabilities(customPhantom).
 build();
 
 
-describe('1 Проверяем index.html', function() {
+describe('PhantomJS: 1 Проверяем index.html', function() {
   /* Не знаю, зачем это делать каждый раз... Как было показано в официальной документации на примере драйвера chrome. Всё ведь работает
   var driver;
   before(function(){

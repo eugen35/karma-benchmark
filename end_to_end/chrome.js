@@ -3,12 +3,12 @@
 
 var By = require('selenium-webdriver').By,
     until = require('selenium-webdriver').until,
-    chrome = require('selenium-webdriver'), //драйвер firefox что-то глючит (многие пишут), причём не гуглится толком как избавиться от ошибки.
+    chrome = require('selenium-webdriver/chrome'), //драйвер firefox что-то глючит (многие пишут), причём не гуглится толком как избавиться от ошибки.
     test = require('selenium-webdriver/testing'),
     assert = require('selenium-webdriver/testing/assert');
 
 
-test.describe('1 Проверяем index.html', function() {
+test.describe('Chrome: 1 Проверяем index.html', function() {
   var driver;
 
   test.before(function() {
