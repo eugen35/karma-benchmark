@@ -6,7 +6,7 @@
   "scripts": {
     "test": "npm run test_server_side && npm run test_client_side && npm run test_end_to_end",
     "test_client_side": "node karma_start_all_configs",
-    "test_server_side": "mocha $(find spec/ ! -path '*.cs.js')",
+    "test_server_side": "istanbul cover node_modules\\mocha\\bin\\_mocha test\\*.ss.js",
     "test_end_to_end": "mocha -t 10000 end_to_end/index.js"
   },
   "keywords": [],
@@ -27,6 +27,7 @@
     "karma-mocha": "^1.2.0",
     "karma-phantomjs-launcher": "1.0.1",
     "mocha": "^3.1.0",
+    "mocha-istanbul": "^0.3.0",
     "selenium-webdriver": "^3.0.0-beta-3",
     "sinon": "^1.17.6",
     "sinon-chai": "^2.8.0"
