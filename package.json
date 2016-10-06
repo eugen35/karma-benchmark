@@ -7,7 +7,7 @@
     "test": "npm run test_server_side_unit && npm run test_client_side_unit_n_bench && npm run test_end_to_end",
     "test_client_side_unit_n_bench": "node karma_start_all_configs",
     "test_server_side_unit": "istanbul cover node_modules\\mocha\\bin\\_mocha test\\*.ss.js",
-    "test_server_side_bench": "mocha *.ss.js",
+    "test_server_side_bench": "node bench/array.ss.js",
     "test_end_to_end": "mocha -t 10000 end_to_end/index.js"
   },
   "keywords": [],
@@ -32,6 +32,7 @@
     "mocha-istanbul": "^0.3.0",
     "selenium-webdriver": "^3.0.0-beta-3",
     "sinon": "^1.17.6",
-    "sinon-chai": "^2.8.0"
+    "sinon-chai": "^2.8.0",
+    "spectrophotometer": "^1.0.1"
   }
 }

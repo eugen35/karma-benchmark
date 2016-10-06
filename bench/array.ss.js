@@ -1,6 +1,12 @@
-var Benchmark = require('benchmark');
-var suite = Benchmark.Suite;
-var benchmark = Benchmark.Suite.benchmark;
+//var Benchmark = require('benchmark');
+//var suite = Benchmark.Suite;
+//var benchmark = Benchmark.Suite.benchmark;
+
+var spectrophotometer = require('spectrophotometer');
+//var suite = spectrophotometer.benchset; - просто запускает тесты по-очереди
+var suite = spectrophotometer.compare; // - сравнивает результаты внутри пакета, лучший результат подсвечивает другим цветом
+var benchmark = spectrophotometer.bench;
+
 
 var getAnswer = require('./../src/server_code.ss');
 var getAnswer1 = require('./../src/server_code1.ss');
@@ -15,9 +21,13 @@ suite('Array iteration', function() {
     });
 });
 
+// Run all defined benchmarks
+spectrophotometer.run();
 
 
 /*
+ //А вот так выглядит использование BenchmarkJS без spectrophotometer:
+
  var suite = new Benchmark.Suite;
  console.log('Wait some seconds for test result. Now test will be running')
  // add tests
